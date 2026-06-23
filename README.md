@@ -1,6 +1,7 @@
-**About this fork**
-Added YouTube Exploder style Overlay buttons,
-Everything else is matched to upstream
+# About this fork
+## Added YouTube Exploder style Overlay buttons,
+Everything else is matched to upstream!
+Thanks to anddea❤️
 
 <div align="center">
 <img src="assets/rvx-logo.png" alt="RVX logo" width="128">
