@@ -430,7 +430,7 @@ public class PlayerPatch {
 		}
 		
 		if (!YouTubeActivityHook.useBoldIcons(true)) {
-			imageView.setVisibility(view.GONE);
+			imageView.setVisibility(View.GONE);
 			return null;
 		}
 		
