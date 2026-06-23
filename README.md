@@ -1,5 +1,5 @@
 # About this fork
-## Added YouTube Exploder style Overlay buttons,
+## Added YouTube Exploder style Overlay buttons
 Everything else is matched to upstream!
 Thanks to anddea❤️
 
