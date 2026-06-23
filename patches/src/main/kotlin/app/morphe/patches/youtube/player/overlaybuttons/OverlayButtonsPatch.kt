@@ -1,4 +1,4 @@
-herepackage app.morphe.patches.youtube.player.overlaybuttons
+package app.morphe.patches.youtube.player.overlaybuttons
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
