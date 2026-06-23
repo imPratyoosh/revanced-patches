@@ -131,5 +131,4 @@
 | `Watch history` | Adds an option to change the domain of the watch history or check its status. | 6.20.51 ~ 8.30.54 |
 </details>
 
-**About this fork**
 
