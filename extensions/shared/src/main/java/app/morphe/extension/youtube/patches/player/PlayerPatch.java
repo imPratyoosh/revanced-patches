@@ -426,14 +426,19 @@ public class PlayerPatch {
         final boolean hideView = Settings.HIDE_PLAYER_FULLSCREEN_BUTTON.get();
 
 		if (!hideView) {
-			return imageView
-				}
-		if (!YouTubeActivityHook. useBoldIcons(true) {
-			return null
-				}
+			return imageView;
+		}
+		
+		if (!YouTubeActivityHook.useBoldIcons(true)) {
+			imageView.setVisibility(view.GONE);
+			return null;
+		}
+		
 		// Cannot remove the button beacuse the bold overlay player buttons
 		// rely on draw updates to control fade in/out. Move it offscreen instead.
-    }
+		imageView.setY(imageView.getY() - FULLSCREEN_HIDDEN_Y_OFFSET);
+		return imageView;
+	}
 
     public static boolean hidePreviousNextButton(boolean previousOrNextButtonVisible) {
         return !Settings.HIDE_PLAYER_PREVIOUS_NEXT_BUTTON.get() && previousOrNextButtonVisible;
