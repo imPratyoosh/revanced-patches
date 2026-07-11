@@ -79,6 +79,7 @@ import app.morphe.util.Utils.printWarn
 import app.morphe.util.copyResources
 import app.morphe.util.copyXmlNode
 import app.morphe.util.doRecursively
+import app.morphe.util.inputStreamFromBundledResourceOrThrow
 import app.morphe.util.findFreeRegister
 import app.morphe.util.lowerCaseOrThrow
 import org.w3c.dom.Element
@@ -326,14 +327,29 @@ val overlayButtonsPatch = resourcePatch(
                 "revanced_subtitle_overlay_layout.xml"
             )
         )
-
-        // Merge XML nodes from the host to their respective XML files.
-        copyXmlNode(
-            "youtube/overlaybuttons/shared/host",
-            "layout/youtube_controls_bottom_ui_container.xml",
-            "android.support.constraint.ConstraintLayout"
+        
+        val overlayButtonsHostLayoutFileName = "layout/youtube_controls_bottom_ui_container.xml"
+        val bottomControlsLayoutFileNames = arrayOf(
+            "youtube_controls_bottom_ui_container.xml",
+            "youtube_video_exploder_controls_bottom_ui_container.xml",
         )
-
+        
+        // Merge XML nodes from the host to their respective XML files.
+        bottomControlsLayoutFileNames.forEach { xmlFile ->
+            val targetXml = get("res").resolve("layout").resolve(xmlFile)
+            if (targetXml.exists()) {
+                "android.support.constraint.ConstraintLayout".copyXmlNode(
+                    document(
+                        inputStreamFromBundledResourceOrThrow(
+                            "youtube/overlaybuttons/shared/host",
+                            overlayButtonsHostLayoutFileName,
+                        )
+                    ),
+                    document("res/layout/$xmlFile"),
+                ).close()
+            }
+        }
+        
         document("res/layout/youtube_controls_bottom_ui_container.xml").use { document ->
             document.doRecursively loop@{ node ->
                 if (node !is Element) return@loop
@@ -347,12 +363,10 @@ val overlayButtonsPatch = resourcePatch(
                     }
             }
         }
-
-        arrayOf(
-            "youtube_controls_bottom_ui_container.xml",
+            (bottomControlsLayoutFileNames + arrayOf(
             "youtube_controls_fullscreen_button.xml",
             "youtube_controls_cf_fullscreen_button.xml"
-        ).forEach { xmlFile ->
+        )).forEach { xmlFile ->
             val targetXml = get("res").resolve("layout").resolve(xmlFile)
             if (targetXml.exists()) {
                 document("res/layout/$xmlFile").use { document ->
