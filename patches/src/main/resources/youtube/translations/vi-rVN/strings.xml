@@ -125,7 +125,7 @@ Nếu bạn đã mua gói Premium thì cài đặt này có thể không cần t
     <string name="morphe_spoof_video_streams_user_dialog_message">Tắt cài đặt này có thể gây ra lỗi khi phát.</string>
     <string name="revanced_advanced_video_quality_menu_summary_off">Trình đơn chất lượng video nâng cao không được hiển thị</string>
     <string name="revanced_advanced_video_quality_menu_summary_on">Trình đơn chất lượng video nâng cao được hiển thị</string>
-    <string name="revanced_advanced_video_quality_menu_title">Hiện menu chất lượng video nâng cao</string>
+    <string name="revanced_advanced_video_quality_menu_title">Mở menu chất lượng \'Nâng cao\'</string>
     <string name="revanced_advanced_video_quality_menu_type_summary_off">Trình đơn tuỳ chọn kiểu cũ được sử dụng.</string>
     <string name="revanced_advanced_video_quality_menu_type_summary_on">Hộp thoại tuỳ chỉnh được sử dụng.</string>
     <string name="revanced_advanced_video_quality_menu_type_title">Kiểu trình đơn chất lượng video nâng cao trong Shorts</string>
@@ -133,7 +133,7 @@ Nếu bạn đã mua gói Premium thì cài đặt này có thể không cần t
 
 Nếu được bật, URL video sẽ được gửi đến máy chủ API và không có dữ liệu nào khác được gửi. Nếu video không có hình thu nhỏ DeArrow, thì hình thu nhỏ gốc hoặc ảnh chụp tĩnh sẽ được hiển thị
 
-Nhấn vào đây để mở DeArrow.ajay.app"</string>
+Nhấn vào đây để truy cập DeArrow.ajay.app"</string>
     <string name="revanced_alt_thumbnail_dearrow_about_title">DeArrow</string>
     <string name="revanced_alt_thumbnail_dearrow_api_url_invalid_toast">URL của API DeArrow không hợp lệ.</string>
     <string name="revanced_alt_thumbnail_dearrow_api_url_summary">URL của điểm cuối bộ đệm hình thu nhỏ DeArrow</string>
@@ -177,6 +177,11 @@ Nhấn và giữ để chuyển loại thông tin cần thêm vào."</string>
     <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">Trình đơn tuỳ chọn kiểu cũ được sử dụng.</string>
     <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">Hộp thoại tuỳ chỉnh được sử dụng.</string>
     <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Kiểu trình đơn chất lượng video</string>
+    <string name="revanced_auto_captions_style_entry_1">Luôn hiển thị</string>
+    <string name="revanced_auto_captions_style_entry_2">Không bao giờ hiện</string>
+    <string name="revanced_auto_captions_style_entry_3">Hiển thị khi bật tiếng</string>
+    <string name="revanced_auto_captions_style_entry_4">Hiển thị khi tắt tiếng</string>
+    <string name="revanced_auto_captions_style_title">Tự động hiển thị phụ đề</string>
     <string name="revanced_bypass_ambient_mode_restrictions_summary_off">Các hạn chế tiết kiệm pin của chế độ môi trường xung quanh chưa bị bỏ qua</string>
     <string name="revanced_bypass_ambient_mode_restrictions_summary_on">Các hạn chế tiết kiệm pin của chế độ môi trường xung quanh đã được bỏ qua</string>
     <string name="revanced_bypass_ambient_mode_restrictions_title">Bỏ qua hạn chế cho chế độ môi trường xung quanh</string>
@@ -304,7 +309,7 @@ Hạn chế: Nút Quay lại trên thanh công cụ có thể không hoạt đ�
     <string name="revanced_debug_logs_none_found">Không tìm thấy nhật ký</string>
     <string name="revanced_debug_protobuffer_summary_off">Nhật ký gỡ lỗi không chứa dữ liệu protobuf</string>
     <string name="revanced_debug_protobuffer_summary_on">Nhật ký gỡ lỗi chứa cả dữ liệu protobuf</string>
-    <string name="revanced_debug_protobuffer_title">Ghi nhật ký gỡ lỗi (Protocol Buffer)</string>
+    <string name="revanced_debug_protobuffer_title">Bộ đệm giao thức nhật ký gỡ lỗi</string>
     <string name="revanced_debug_spannable_summary_off">Nhật ký gỡ lỗi không bao gồm dữ liệu spannable.</string>
     <string name="revanced_debug_spannable_summary_on">Nhật ký gỡ lỗi bao gồm dữ liệu spannable.</string>
     <string name="revanced_debug_spannable_title">Ghi nhật ký spannable</string>
@@ -583,7 +588,7 @@ Lưu ý:
     <string name="revanced_external_downloader_not_installed_dialog_message">"Có vẻ như %1$s chưa được cài đặt.
  Vui lòng tải xuống %2$s từ trang web."</string>
     <string name="revanced_external_downloader_not_installed_dialog_title">Cảnh báo</string>
-    <string name="revanced_external_downloader_not_installed_warning">%s chưa được cài đặt. Vui lòng cài đặt ứng dụng.</string>
+    <string name="revanced_external_downloader_not_installed_warning">%s chưa được cài đặt. Hãy cài đặt nó đi.</string>
     <string name="revanced_external_downloader_other_item">Khác</string>
     <string name="revanced_external_downloader_other_item_hint">Nhập tên gói</string>
     <string name="revanced_external_downloader_package_name_playlist_summary">Chọn hoặc nhập tên gói ứng dụng trình tải xuống đã được cài đặt trên thiết bị của bạn.</string>
@@ -592,9 +597,9 @@ Lưu ý:
     <string name="revanced_external_downloader_package_name_video_long_press_title">Tên gói trình tải xuống video khi nhấn và giữ</string>
     <string name="revanced_external_downloader_package_name_video_summary">Chọn hoặc nhập tên gói ứng dụng trình tải xuống đã được cài đặt trên thiết bị của bạn.</string>
     <string name="revanced_external_downloader_package_name_video_title">Tên gói trình tải xuống video</string>
-    <string name="revanced_external_downloader_package_not_found_warning">"Không tìm thấy ứng dụng đã cài với tên gói: %s
+    <string name="revanced_external_downloader_package_not_found_warning">"Không tìm thấy ứng dụng đã cài đặt với tên gói: %s
 
-Vui lòng kiểm tra lại tên gói và đảm bảo ứng dụng đã được cài trên thiết bị"</string>
+Kiểm tra xem tên gói có chính xác không và ứng dụng đã được cài đặt chưa"</string>
     <string name="revanced_fix_hype_button_icon_summary_off">Biểu tượng nút Khuấy động đã ẩn.</string>
     <string name="revanced_fix_hype_button_icon_summary_on">Biểu tượng nút Khuấy động đã được hiển thị.</string>
     <string name="revanced_fix_hype_button_icon_title">Sữa lỗi nút Khuấy động</string>
@@ -1294,9 +1299,6 @@ Chi tiết: Cài đặt này dường như đã bị máy chủ loại bỏ. Tha
     <string name="revanced_hide_shorts_comments_panel_summary_off">Bảng bình luận được hiển thị.</string>
     <string name="revanced_hide_shorts_comments_panel_summary_on">Bảng bình luận đã ẩn.</string>
     <string name="revanced_hide_shorts_comments_panel_title">Ẩn bảng bình luận</string>
-    <string name="revanced_hide_shorts_dislike_button_summary_off">Nút không thích được hiển thị</string>
-    <string name="revanced_hide_shorts_dislike_button_summary_on">Nút không thích đã bị ẩn</string>
-    <string name="revanced_hide_shorts_dislike_button_title">Ẩn nút Không thích</string>
     <string name="revanced_hide_shorts_floating_button_summary_off">Các nút nổi trong trang Shorts được hiển thị.</string>
     <string name="revanced_hide_shorts_floating_button_summary_on">Các nút nổi trong trang Shorts đã ẩn.</string>
     <string name="revanced_hide_shorts_floating_button_title">Ẩn các nút nổi</string>
@@ -1391,7 +1393,7 @@ Hạn chế: Tiêu đề chính thức trong kết quả tìm kiếm cũng sẽ 
     <string name="revanced_hide_shorts_sound_button_title">Ẩn nút âm thanh</string>
     <string name="revanced_hide_shorts_sound_metadata_label_summary_off">Nhãn siêu dữ liệu âm thanh được hiển thị</string>
     <string name="revanced_hide_shorts_sound_metadata_label_summary_on">Nhãn siêu dữ liệu âm thanh đã bị ẩn</string>
-    <string name="revanced_hide_shorts_sound_metadata_label_title">Ẩn nhãn siêu dữ liệu âm thanh</string>
+    <string name="revanced_hide_shorts_sound_metadata_label_title">Ẩn nhãn metadata âm thanh</string>
     <string name="revanced_hide_shorts_stickers_summary_off">Nhãn dán được hiển thị</string>
     <string name="revanced_hide_shorts_stickers_summary_on">Nhãn dán đã bị ẩn</string>
     <string name="revanced_hide_shorts_stickers_title">Ẩn nhãn dán</string>
@@ -1626,6 +1628,8 @@ Hạn chế: Không nhấn được vào YouTube Doodles."</string>
     <string name="revanced_language_VI">Tiếng Việt\n<small>Tiếng Việt</small></string>
     <string name="revanced_language_ZH">Tiếng Trung\n<small>中文</small></string>
     <string name="revanced_language_title">Ngôn ngữ ReVanced</string>
+    <string name="revanced_miniplayer_disable_horizontal_drag_playback_title">Ngừng phát khi vuốt ngang</string>
+    <string name="revanced_miniplayer_disable_horizontal_reposition_title">Ghi nhớ vị trí vuốt</string>
     <string name="revanced_miniplayer_double_tap_action_summary_off">Thao tác chạm hai lần và chụm để thay đổi kích thước đã tắt</string>
     <string name="revanced_miniplayer_double_tap_action_summary_on">"Thao tác chạm hai lần và chụm để thay đổi kích thước đã bật
 
@@ -2014,9 +2018,9 @@ Nhấn vào đây để xem các bước tạo khóa API."</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. &lt;a href=%1$s&gt;Tạo dự án mới&lt;/a&gt;.&lt;br&gt;2. Ấn vào &lt;b&gt;CREATE&lt;/b&gt;.&lt;br&gt;3. Đi tới &lt;a href=%2$s&gt;YouTube Data API v3&lt;/a&gt;.&lt;br&gt;4. Ấn vào &lt;b&gt;ENABLE&lt;/b&gt;.&lt;br&gt;5. Ấn vào &lt;b&gt;CREATE CREDENTIALS&lt;/b&gt;.&lt;br&gt;6. Chọn &lt;b&gt;Public data&lt;/b&gt;.&lt;br&gt;7. Ấn vào &lt;b&gt;NEXT&lt;/b&gt;.&lt;br&gt;8. Sao chép mã khoá API.&lt;br&gt;&lt;br&gt;※ Không nên chia sẻ mã khoá API với người khác, vì vậy chúng cũng không có mặt trong mục Nhập/Xuất cài đặt.</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_title">Tạo mã khoá</string>
     <string name="revanced_ryd_about">Giới thiệu</string>
-    <string name="revanced_ryd_attribution_summary">"Dữ liệu được cung cấp bởi Return YouTube Dislike API.
+    <string name="revanced_ryd_attribution_summary">"Dữ liệu được cung cấp bởi API Return YouTube Dislike
 
-Nhấn vào đây để mở ReturnYouTubeDislike.com"</string>
+Bấm vào đây để mở ReturnYouTubeDislike.com"</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_compact_layout_summary_off">Nút thích được thiết kế để tối ưu ngoại hình tốt nhất</string>
     <string name="revanced_ryd_compact_layout_summary_on">Nút thích được thiết kế để tối ưu độ rộng</string>
@@ -2034,15 +2038,6 @@ Nhấn vào đây để mở ReturnYouTubeDislike.com"</string>
     <string name="revanced_ryd_failure_connection_status_code">Lượt không thích không khả dụng ( trạng thái %d)</string>
     <string name="revanced_ryd_failure_connection_timeout">Không thể hiện số Dislike (API hết thời gian chờ)</string>
     <string name="revanced_ryd_failure_generic">Số lượt không thích không khả dụng (%s)</string>
-    <string name="revanced_ryd_failure_ryd_enabled_while_playing_video_then_user_voted">Tải lại video để bỏ phiếu bằng ReturnYouTubeDislike</string>
-    <string name="revanced_ryd_shorts_summary_off">Số lượt không thích trên Shorts không được hiển thị</string>
-    <string name="revanced_ryd_shorts_summary_on">"Số lượt không thích trên Shorts được hiển thị
-
-Hạn chế: Số lượt không thích có thể không xuất hiện ở chế độ ẩn danh"</string>
-    <string name="revanced_ryd_shorts_summary_on_disclaimer">"Số lượt không thích được hiển thị trên Shorts.
-
-Hạn chế: Số lượt không thích có thể không hiển thị nếu người dùng không đăng nhập hoặc ở chế độ ẩn danh."</string>
-    <string name="revanced_ryd_shorts_title">Hiện số lượt không thích trong Shorts</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_off">Thông báo ngắn không hiện nếu Return YouTube Dislike không khả dụng</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_on">Thông báo ngắn sẽ hiện nếu Return YouTube Dislike không khả dụng</string>
     <string name="revanced_ryd_toast_on_connection_error_title">Hiện cảnh báo lỗi kết nối</string>
@@ -2052,7 +2047,7 @@ Hạn chế: Số lượt không thích có thể không hiển thị nếu ngư
     <string name="revanced_sanitize_comments_category_bar_title">Thu gọn thanh danh mục</string>
     <string name="revanced_sanitize_video_subtitle_summary_off">"Các tag có các cụm từ như \"#\", \"Chiến dịch gây quỹ\", \"Cửa hàng\" và \"sản phẩm\" được hiển thị trong phụ đề video."</string>
     <string name="revanced_sanitize_video_subtitle_summary_on">"Các tag có cụm từ như \"#\", \"Chiến dịch gây quỹ\", \"Cửa hàng\" và \"sản phẩm\" đã ẩn bên dưới tiêu đề video."</string>
-    <string name="revanced_sanitize_video_subtitle_title">Ẩn các tag bên dưới tiêu đề video</string>
+    <string name="revanced_sanitize_video_subtitle_title">Làm sạch phụ đề video</string>
     <string name="revanced_sb_about">Giới thiệu</string>
     <string name="revanced_sb_about_api">sponsor.ajay.app</string>
     <string name="revanced_sb_about_api_sum">Dữ liệu này được cung cấp bởi API Chặn Nhà tài trợ. Nhấn vào đây để tìm hiểu thêm và xem các bản tải xuống cho các nền tảng khác.</string>
@@ -2280,6 +2275,9 @@ ID người dùng của bạn giống như mật khẩu và không bao giờ đ�
     <string name="revanced_sb_vote_no_segments">Không có phân đoạn nào để bỏ phiếu</string>
     <string name="revanced_sb_vote_segment_time_to_from">%1$s đến %2$s</string>
     <string name="revanced_sb_vote_upvote">Ủng hộ</string>
+    <string name="revanced_search_in_channel_title">Tìm kiếm kênh </string>
+    <string name="revanced_search_in_channel_use_webview_summary_on">\"Tìm kiếm kênh\"  sẽ mở trang tìm kiếm kênh trên web dành cho thiết bị di động</string>
+    <string name="revanced_search_in_channel_use_webview_title">Sử dụng WebView cho tìm kiếm kênh </string>
     <string name="revanced_search_settings_category_title">Cài đặt tìm kiếm</string>
     <string name="revanced_search_title">Tìm kiếm</string>
     <string name="revanced_send">Gửi</string>
@@ -2409,8 +2407,15 @@ Hầu hết các lỗi không thể sửa được do hạn chế tới từ ph�
     <string name="revanced_shorts_player_type_shorts">Trình phát Shorts</string>
     <string name="revanced_shorts_player_type_title">Mở Shorts bằng</string>
     <string name="revanced_show_settings_button_index_title">Vị trí nút Cài đặt</string>
+    <string name="revanced_show_settings_button_summary_off">Nút cài đặt đang không hiển thị </string>
+    <string name="revanced_show_settings_button_summary_on">Nút cài đặt đang hiển thị.</string>
     <string name="revanced_show_settings_button_title">Hiện nút Cài đặt</string>
+    <string name="revanced_show_settings_button_type_summary_off">Ấn để mở cài đặt YouTube</string>
+    <string name="revanced_show_settings_button_type_summary_on">Ấn để mở cài đặt RVX </string>
     <string name="revanced_show_settings_button_type_title">Thao tác nút cài đặt</string>
+    <string name="revanced_show_toolbar_settings_button_index_title">Vị trí nút Cài đặt</string>
+    <string name="revanced_show_toolbar_settings_button_title">Hiện nút Cài đặt</string>
+    <string name="revanced_show_toolbar_settings_button_type_title">Thao tác nút cài đặt</string>
     <string name="revanced_show_video_title_section_summary">"Hiển thị phần tiêu đề video ở chế độ toàn màn hình.
 
 Hạn chế: Tiêu đề video sẽ biến mất khi nhấn vào."</string>
@@ -2688,7 +2693,7 @@ Miễn trừ trách nhiệm: Cookie tạo ra khi không đăng nhập có thể 
     <string name="revanced_vot_lang_auto">
 Tự động phát hiện</string>
     <string name="revanced_vot_live_voices_unavailable">Hiện không có giọng nói trực tiếp, sử dụng tiêu chuẩn</string>
-    <string name="revanced_vot_original_audio_volume_summary">Âm lượng của âm thanh YouTube gốc khi bản dịch đang phát</string>
+    <string name="revanced_vot_original_audio_volume_summary">Âm lượng của âm thanh gốc trên YouTube khi bản dịch đang phát</string>
     <string name="revanced_vot_original_audio_volume_title">Âm lượng âm thanh gốc</string>
     <string name="revanced_vot_playback_error">Không thể phát âm thanh bản dịch</string>
     <string name="revanced_vot_proxy_url_summary">Máy chủ proxy VOT. Mặc định: vot-worker.toil.cc</string>
@@ -2705,7 +2710,7 @@ Tự động phát hiện</string>
     <string name="revanced_vot_target_language_title">Ngôn ngữ mục tiêu</string>
     <string name="revanced_vot_time_min">%d phút</string>
     <string name="revanced_vot_time_sec">%d giây</string>
-    <string name="revanced_vot_translation_volume_summary">Âm lượng của giọng nói dịch lồng tiếng</string>
+    <string name="revanced_vot_translation_volume_summary">Âm lượng của giọng lồng tiếng bản dịch</string>
     <string name="revanced_vot_translation_volume_title">Âm lượng bản dịch</string>
     <string name="revanced_vot_unavailable_live">Tính năng dịch hiện không khả dụng cho các buổi trực tiếp</string>
     <string name="revanced_vot_unavailable_same_language">Âm thanh video đã được định dạng bằng ngôn ngữ mục tiêu</string>

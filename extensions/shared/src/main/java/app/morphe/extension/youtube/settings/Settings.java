@@ -10,6 +10,8 @@ import static app.morphe.extension.shared.settings.Setting.parentsAll;
 import static app.morphe.extension.shared.settings.Setting.parentsAny;
 import static app.morphe.extension.shared.settings.Setting.parentsAnyInverted;
 import static app.morphe.extension.shared.utils.StringRef.str;
+import static app.morphe.extension.shared.patches.AutoCaptionsPatch.AutoCaptionsStyle.BOTH_DISABLED;
+import static app.morphe.extension.shared.patches.AutoCaptionsPatch.AutoCaptionsStyle.BOTH_ENABLED;
 import static app.morphe.extension.youtube.patches.player.MiniplayerPatch.MiniplayerType;
 import static app.morphe.extension.youtube.sponsorblock.objects.CategoryBehaviour.IGNORE;
 import static app.morphe.extension.youtube.sponsorblock.objects.CategoryBehaviour.MANUAL_SKIP;
@@ -22,6 +24,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import app.morphe.extension.shared.patches.spoof.SpoofStreamingDataPatch.HideAudioFlyoutMenuAvailability;
+import app.morphe.extension.shared.patches.AutoCaptionsPatch.AutoCaptionsStyle;
+import app.morphe.extension.shared.settings.BaseSettings;
 import app.morphe.extension.shared.settings.BooleanSetting;
 import app.morphe.extension.shared.settings.EnumSetting;
 import app.morphe.extension.shared.settings.FloatSetting;
@@ -69,6 +73,14 @@ public class Settings extends SharedYouTubeSettings {
             FALSE,
             true,
             "morphe_force_avc_codec_user_dialog_message"
+    );
+
+    // Captions.
+    // Use the legacy switch as the initial default when upgrading from a pre-20.26 installation.
+    public static final EnumSetting<AutoCaptionsStyle> AUTO_CAPTIONS_STYLE = new EnumSetting<>(
+            "revanced_auto_captions_style",
+            BaseSettings.DISABLE_AUTO_CAPTIONS.get() ? BOTH_DISABLED : BOTH_ENABLED,
+            true
     );
     public static final BooleanSetting SPOOF_VIDEO_STREAMS_AV1 = new BooleanSetting(
             "morphe_spoof_video_streams_av1",
@@ -241,6 +253,7 @@ public class Settings extends SharedYouTubeSettings {
 
     // PreferenceScreen: General - Override buttons
     public static final BooleanSetting OVERRIDE_PLAYLIST_DOWNLOAD_BUTTON = new BooleanSetting("revanced_override_playlist_download_button", FALSE, true);
+    public static final BooleanSetting OVERRIDE_PLAY_NEXT_IN_QUEUE = new BooleanSetting("revanced_override_play_next_in_queue", FALSE, true);
     public static final BooleanSetting OVERRIDE_VIDEO_DOWNLOAD_BUTTON = new BooleanSetting("revanced_override_video_download_button", FALSE, true);
     public static final BooleanSetting OVERRIDE_VIDEO_DOWNLOAD_BUTTON_QUEUE_MANAGER = new BooleanSetting("revanced_override_video_download_button_queue_manager", FALSE, true,
             "revanced_queue_manager_user_dialog_message", parent(OVERRIDE_VIDEO_DOWNLOAD_BUTTON));
@@ -303,6 +316,9 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_VOICE_SEARCH_BUTTON = new BooleanSetting("revanced_hide_voice_search_button", FALSE, true);
     public static final BooleanSetting HIDE_YOU_MAY_LIKE_SECTION = new BooleanSetting("revanced_hide_you_may_like_section", FALSE, true);
     public static final BooleanSetting HIDE_YOUTUBE_DOODLES = new BooleanSetting("revanced_hide_youtube_doodles", FALSE, true, "revanced_hide_youtube_doodles_user_dialog_message");
+    public static final BooleanSetting SHOW_TOOLBAR_SETTINGS_BUTTON = new BooleanSetting("revanced_show_toolbar_settings_button", FALSE, true);
+    public static final IntegerSetting SHOW_TOOLBAR_SETTINGS_BUTTON_INDEX = new IntegerSetting("revanced_show_toolbar_settings_button_index", 3, true, parent(SHOW_TOOLBAR_SETTINGS_BUTTON));
+    public static final BooleanSetting SHOW_TOOLBAR_SETTINGS_BUTTON_TYPE = new BooleanSetting("revanced_show_toolbar_settings_button_type", FALSE, true, parent(SHOW_TOOLBAR_SETTINGS_BUTTON));
     public static final BooleanSetting REPLACE_TOOLBAR_CREATE_BUTTON = new BooleanSetting("revanced_replace_toolbar_create_button", FALSE, true, parent(SWITCH_CREATE_WITH_NOTIFICATIONS_BUTTON));
     public static final BooleanSetting REPLACE_TOOLBAR_CREATE_BUTTON_TYPE = new BooleanSetting("revanced_replace_toolbar_create_button_type", FALSE, true,
             parentsAll(SWITCH_CREATE_WITH_NOTIFICATIONS_BUTTON, REPLACE_TOOLBAR_CREATE_BUTTON));
@@ -459,6 +475,8 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting MINIPLAYER_DOUBLE_TAP_ACTION = new BooleanSetting("revanced_miniplayer_double_tap_action", TRUE, true, new MiniplayerPatch.MiniplayerAnyModernAvailability());
     public static final BooleanSetting MINIPLAYER_DRAG_AND_DROP = new BooleanSetting("revanced_miniplayer_drag_and_drop", TRUE, true, new MiniplayerPatch.MiniplayerAnyModernAvailability());
     public static final BooleanSetting MINIPLAYER_HORIZONTAL_DRAG = new BooleanSetting("revanced_miniplayer_horizontal_drag", FALSE, true, new MiniplayerPatch.MiniplayerHorizontalDragAvailability());
+    public static final BooleanSetting MINIPLAYER_DISABLE_HORIZONTAL_DRAG_PLAYBACK = new BooleanSetting("revanced_miniplayer_disable_horizontal_drag_playback", FALSE, true, new MiniplayerPatch.MiniplayerHorizontalDragPlaybackAvailability());
+    public static final BooleanSetting MINIPLAYER_DISABLE_HORIZONTAL_REPOSITION = new BooleanSetting("revanced_miniplayer_disable_horizontal_reposition", FALSE, true, new MiniplayerPatch.MiniplayerHorizontalRepositioningAvailability());
     public static final BooleanSetting MINIPLAYER_HIDE_OVERLAY_BUTTONS = new BooleanSetting("revanced_miniplayer_hide_overlay_buttons", FALSE, true, new MiniplayerPatch.MiniplayerHideOverlayButtonsAvailability());
     public static final BooleanSetting MINIPLAYER_HIDE_SUBTEXT = new BooleanSetting("revanced_miniplayer_hide_subtext", FALSE, true, new MiniplayerPatch.MiniplayerHideSubtextsAvailability());
     public static final BooleanSetting MINIPLAYER_HIDE_REWIND_FORWARD = new BooleanSetting("revanced_miniplayer_hide_rewind_forward", TRUE, true, new MiniplayerPatch.MiniplayerHideRewindOrOverlayOpacityAvailability());
@@ -593,7 +611,6 @@ public class Settings extends SharedYouTubeSettings {
 
     // PreferenceScreen: Shorts - Shorts player components - Action buttons
     public static final BooleanSetting HIDE_SHORTS_LIKE_BUTTON = new BooleanSetting("revanced_hide_shorts_like_button", FALSE);
-    public static final BooleanSetting HIDE_SHORTS_DISLIKE_BUTTON = new BooleanSetting("revanced_hide_shorts_dislike_button", FALSE);
     public static final BooleanSetting HIDE_SHORTS_COMMENTS_BUTTON = new BooleanSetting("revanced_hide_shorts_comments_button", FALSE);
     public static final BooleanSetting HIDE_SHORTS_REMIX_BUTTON = new BooleanSetting("revanced_hide_shorts_remix_button", FALSE);
     public static final BooleanSetting HIDE_SHORTS_SHARE_BUTTON = new BooleanSetting("revanced_hide_shorts_share_button", FALSE);
@@ -748,7 +765,6 @@ public class Settings extends SharedYouTubeSettings {
     // PreferenceScreen: Return YouTube Dislike
     public static final BooleanSetting RYD_ENABLED = new BooleanSetting("ryd_enabled", TRUE);
     public static final StringSetting RYD_USER_ID = new StringSetting("ryd_user_id", "");
-    public static final BooleanSetting RYD_SHORTS = new BooleanSetting("ryd_shorts", TRUE, parent(RYD_ENABLED));
     public static final BooleanSetting RYD_DISLIKE_PERCENTAGE = new BooleanSetting("ryd_dislike_percentage", FALSE, parent(RYD_ENABLED));
     public static final BooleanSetting RYD_COMPACT_LAYOUT = new BooleanSetting("ryd_compact_layout", FALSE, parent(RYD_ENABLED));
     public static final BooleanSetting RYD_ESTIMATED_LIKE = new BooleanSetting("ryd_estimated_like", TRUE, true, parent(RYD_ENABLED));
